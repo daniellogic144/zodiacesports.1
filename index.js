@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client()
 const { CanvasSenpai } = require("canvas-senpai")
 const canva = new CanvasSenpai();
+const welcome = require('./welcome.js')
 
 client.on('ready', () => {
   console.log('The client is ready!')
@@ -9,7 +10,9 @@ client.on('ready', () => {
       client.user.setActivity('ZDC | ZODIAC', { type: 'STREAMING'})
 })
 
-
+client.on('ready', () => {
+	welcome(client)
+})
 
 
 
