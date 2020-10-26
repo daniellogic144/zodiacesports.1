@@ -9,3 +9,5 @@ module.exports = client => {
 	  channel.send(message)
 })
 }
+
+// Easteregg //
