@@ -12,7 +12,7 @@ client.on('ready', () => {
 	welcome(client)
 })
 
-
+ // Daniel ist cool //
 
 
 client.on('message', message=>{
