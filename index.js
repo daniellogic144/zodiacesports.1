@@ -1,7 +1,5 @@
 const Discord = require("discord.js");
 const client = new Discord.Client()
-const { CanvasSenpai } = require("canvas-senpai")
-const canva = new CanvasSenpai();
 const welcome = require('./welcome.js')
 
 client.on('ready', () => {
