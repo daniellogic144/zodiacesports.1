@@ -15,8 +15,7 @@ client.on('guildMemberAdd', (member) => {
 
   const channel = member.guild.channels.cache.get(channelId)
   member.roles.add("768582572639780884"); 
-  member(guild)
-  channel.send(message)
+  member(guild).channel.send(message)
 })
 
 
