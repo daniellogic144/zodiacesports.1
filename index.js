@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const client = new Discord.Client()
-const welcome = require('./welcome.js')
 
 client.on('ready', () => {
   console.log('The client is ready!')
@@ -8,11 +7,17 @@ client.on('ready', () => {
       client.user.setActivity('ZDC | ZODIAC', { type: 'STREAMING'})
 })
 
-client.on('ready', () => {
-	welcome(client)
+
+const channelId = '768456836566220805'
+
+client.on('guildMemberAdd', (member) => {
+  const message = `Hey <@${member.id}>,  welcome to the **Zodiac Esports [BETA]** server:tada::hugging:`
+
+  const channel = member.guild.channels.cache.get(channelId)
+  member.roles.add("768582572639780884");
+  channel.send(message)
 })
 
- // Daniel ist cool //
 
 
 client.on('message', message=>{
